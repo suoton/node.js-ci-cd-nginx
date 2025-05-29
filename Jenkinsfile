@@ -3,13 +3,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/suoton/node.js-ci-cd-nginx.git' // Clone your repository
-                sh 'npm install' // Install dependencies
+                git 'https://github.com/suoton/node.js-ci-cd-nginx.git'
+                sh 'npm install'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'ssh -i to1.pem ec2-user@13.50.107.238  "cd /home/ec2-user/chat-app && npm start"'
+                sh 'ssh -i to1.pem ec2-user@13.50.107.238  "cd /path/to/your/chat-app && npm start"'
             }
         }
-  
+    }
+}

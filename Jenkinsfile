@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git '' // Clone your repository
+                git 'https://github.com/suoton/node.js-ci-cd-nginx.git' // Clone your repository
                 sh 'npm install' // Install dependencies
             }
         }
